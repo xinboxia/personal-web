@@ -1,0 +1,206 @@
+/* .about-page {
+    text-align: center;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Roboto:ital,wght@1,700&display=swap');
+
+#intro-container {
+    background-color: rgb(174, 172, 151);
+}
+
+.self-intro {
+    width: 100%;
+    display: inline-flex;
+}
+
+.self-intro-pic {
+    margin-top: 5%;
+    margin-right: 50px;
+    margin-left: auto;
+    width: 530px;
+    height: 550px;
+}
+
+.pic-slider {
+    max-width: 530px;
+    max-height: 430px;
+    margin: auto;
+}
+
+.pic-img img {
+    float: left;
+    width: 530px;
+    height: 430px;
+    object-fit: cover;
+}
+
+.self-intro-word {
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 8.5%;
+}
+
+.self-intro-title {
+    color: rgb(86, 247, 186);
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.self-intro-body > p {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: left;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.self-intro-body p:first-letter {
+    font-size: 2em;
+    padding: 0.1em;
+    color: #000000;
+}
+
+.self-intro-body p:first-child:first-letter {
+    color: rgb(131, 250, 194);
+}
+
+.self-intro-body p:first-child:first-line {
+    color: inherit;
+}
+
+#frontend-container {
+    
+}
+
+.frontend-background {
+    background-image: url('../background/pic11.jpeg');
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 620px;
+    -webkit-filter: blur(1.5px);
+    -moz-filter: blur(1.5px);
+    -o-filter: blur(1.5px);
+    -ms-filter: blur(1.5px);
+    filter: blur(1.5px);
+}
+
+.frontend {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.frontend-skill-title {
+    position: absolute;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.frontend-skill {
+    display: inline-flex;
+    margin-top: 100px;
+}
+
+.frontend-skill-word {
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.frontend-skill-bar {
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 520px;
+}
+
+.container {
+    text-align: center;
+}
+
+#backend-container {
+    
+}
+
+.backend {
+    margin-top: 620px;
+    position: absolute;
+    background-color: rgb(106, 129, 157);
+    width: 100%;
+    height: 600px;
+}
+
+.backend-title {
+    margin-top: 40px;   
+}
+
+.backend-skill {
+    margin-left: 20px;
+    display: inline-flex;
+}
+
+.backend-skill-word > p {
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.backend-skill-bar {
+    margin-left: 20px;
+    width: 520px;
+}
+
+#dbc-container {
+
+}
+
+.dbc {
+    margin-top: 1220px;
+    position: absolute;
+    background-color: bisque;
+    width: 100%;
+    height: 580px;
+}
+
+.dbc-title {
+    margin-top: 40px;
+}
+
+.dbc-skill {
+    margin-right: 20px;
+    display: inline-flex;
+}
+
+.dbc-skill-bar {
+    margin-left: 20px;
+    width: 520px;
+}
+
+.dbc-skill-word {
+    margin-left: 20px;
+    color: rgb(55, 48, 48);
+    font-size: 20px;
+}
+
+#resume-container {
+
+}
+
+.resume {
+    margin-top: 1800px;
+    position: absolute;
+    background-color: rgb(183, 146, 206);
+    width: 100%;
+    height: 580px;
+}
+
+.resume-title {
+
+}
+
+.resume-download {
+
+}

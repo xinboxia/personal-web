@@ -1,0 +1,161 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    object-fit: contain;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.intro > h1 {
+    margin-top: -100px;
+    color: rgb(173, 229, 230);
+    font-size: 100px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 800;
+    line-height: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    margin-top: calc(50vh - 1em);
+}
+
+.intro > p1 {
+    margin-top: 40px;
+    color: #fff;
+    font-size: 30px;
+    font-family: Avenir-Heavy;
+}
+
+.intro > p2 {
+    color: rgb(173, 229, 230);
+    margin-top: 60px;
+    /* color: rgb(181, 84, 31); */
+    font-size: 65px;
+    font-family: Avenir-Heavy;
+}
+
+.intro > p3 {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-family: Avenir-Heavy;
+}
+
+.video-btns {
+    margin-top: 70px;
+}
+
+.video-btns .btn {
+    margin: 30px;
+}
+
+@media screen and (max-width: 960px) {
+    .intro > h1 {
+        font-size: 70px;
+        margin-top: -150px;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .intro > h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+  
+    .intro > p {
+      font-size: 30px;
+    }
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 90%;
+    }
+}
+
+.gradient-text {
+    /* Fallback: Set a background color. */
+    background-color: #CA4246;
+    
+    /* Create the gradient. */
+     background-image: linear-gradient(
+          45deg,
+          #c46446 16.666%, 
+          #E16541 16.666%, 
+          #E16541 33.333%, 
+          #F18F43 33.333%, 
+          #F18F43 40%, 
+          #50b9c1 50%, 
+          #7ef5df 66.666%, 
+          #5f9ec1 66.666%, 
+          #6cf0e7 83.333%, 
+          #9ef0b8 83.333%);
+    
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    /* Animate the text when loading the element. */
+      /* This animates it on page load and when hovering out. */
+      animation: rainbow-text-simple-animation-rev 0.4s ease forwards;
+  
+  }
+  
+  .gradient-text:hover{
+      animation: rainbow-text-simple-animation 0.4s ease-in forwards;
+  }
+  
+  
+  /* Move the background and make it smaller. */
+  /* Animation shown when entering the page and after the hover animation. */
+  @keyframes rainbow-text-simple-animation-rev {
+      0% {
+          background-size: 650%;
+      }
+      40% {
+          background-size: 650%;
+      }
+      100% {
+          background-size: 100%;
+      }
+  }
+  
+  /* Move the background and make it larger. */
+  /* Animation shown when hovering over the text. */
+  @keyframes rainbow-text-simple-animation {
+      0% {
+          background-size: 100%;
+      }
+      80% {
+          background-size: 650%;
+      }
+      100% {
+          background-size: 650%;
+      }
+  }
+
+
+
+
+  
+
+
