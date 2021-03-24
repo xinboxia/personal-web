@@ -11,13 +11,13 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src='images/pic02.jpeg'
-              text='From UIUC to USC, I have gained solid academic background, learn more about me here!'
+              text='From UIUC to USC, I have gained solid background. Learn more about me here!'
               label='Portfolio'
               path='/about'
             />
             <CardItem
               src='images/pic03.jpeg'
-              text='Check out my favourite music, or post your favourite music here!'
+              text='Check out my weekly recommended music, or search for your own favourite music!'
               label='Music'
               path='/music'
             />
@@ -25,13 +25,13 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src='images/pic04.jpeg'
-              text='See what is happening in crypto world! Or check out the chart here!'
+              text='See what is happening in the crypto world! Check Out chart and newsfeed here!'
               label='Cryptocurrentcy'
               path='/stock'
             />
             <CardItem
               src='images/pic05.jpeg'
-              text='Talk or post anything you want here, let us have some fun'
+              text='Talk or post anything you want, let us have some fun!'
               label='Discussion'
               path='/post'
             />

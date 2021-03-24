@@ -17,6 +17,10 @@ public class Song {
     @ManyToMany(mappedBy = "songs")
     private Set<User> users;
 
+    public Song() {
+
+    }
+
     public Song(String artistName, String songName, String songGenre) {
         this.artistName = artistName;
         this.songName = songName;

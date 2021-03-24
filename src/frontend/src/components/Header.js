@@ -1,13 +1,16 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import '../stylesheet/Header.css'
 import FilterVintageTwoToneIcon from '@material-ui/icons/FilterVintageTwoTone';
 import {Button} from './Button'
+import { render } from '@testing-library/react';
 
 
 function Header() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
+    const [login, setLogin] = useState(sessionStorage.jwt);
+
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
     const showButton = () => {
@@ -18,11 +21,19 @@ function Header() {
         }
     };
 
+    const logoutHandler = () => {
+        sessionStorage.removeItem("jwt")
+        setLogin(null)
+    }
+
     useEffect(() => {
         showButton();
+        logoutHandler();
     }, []);
 
     window.addEventListener('resize', showButton);
+
+    console.log(sessionStorage)
 
     return (
         <nav className='navbar'>
@@ -55,11 +66,16 @@ function Header() {
                         </Link>
                     </li>
                 </ul>
-                
-                <Link to='/login' className='login-button'>
+                { !sessionStorage.jwt ? (
+                    <Link to='/login' className='login-button'>
                     {button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
-                </Link>
-                
+                    </Link>
+                ) : (
+                    <Link to='/login'>
+                    {button && <Button buttonStyle='btn--outline' onClick={logoutHandler}>LOGOUT</Button>}
+                    </Link>
+                )
+                }
             </div>
         </nav>
         

@@ -9,6 +9,9 @@ import Music from './pages/Music'
 import Post from './pages/Post'
 import Stock from './pages/Stock'
 import Footer from './components/Footer'
+import { StateProvider } from './music-repo/utils/StateProvider';
+import reducer, { initialState } from './music-repo/utils/reducer';
+import Register from './login-repo/RegisterForm/Register'
 
 
 function App() {
@@ -25,6 +28,11 @@ function App() {
             <Login />
           </Route>
 
+          <Route path="/register">
+            <Header />
+            <Register />
+          </Route>
+
           {/* Portfolio */}
           <Route path="/about">
             <Header />
@@ -34,7 +42,9 @@ function App() {
           {/* music page */}
           <Route path="/music">
             <Header />
-            <Music />
+            <StateProvider initialState={initialState} reducer={reducer}>
+              <Music />
+            </StateProvider>
             {/* <Footer /> */}
           </Route>
 

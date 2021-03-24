@@ -1,0 +1,103 @@
+.app {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.title {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    margin-top: 21%;
+}
+
+.title > h1 {
+    font-size: 75px;
+    background-color: #CA4246;
+    background-image: linear-gradient(
+        45deg,
+        #c46446 16.666%, 
+        #E16541 16.666%, 
+        #E16541 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 40%, 
+        #50b9c1 50%, 
+        #7ef5df 66.666%, 
+        #5f9ec1 66.666%, 
+        #6cf0e7 83.333%, 
+        #9ef0b8 83.333%
+    );
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: rainbow-text-simple-animation-rev 0.4s ease forwards;
+}
+  
+.title > h1:hover{
+    animation: rainbow-text-simple-animation 0.4s ease-in forwards;
+}
+  
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+.title > h3 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.login {
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+
+}
+
+.login-image > img {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+.login-here > a {
+    color: white;
+    padding: 17px;
+    border-radius: 99px;
+    font-weight: 800;
+    background-color: #1db954;
+}
+
+.my-music {
+    margin-left: 30px;
+}
+
+.word-color {
+    color: #4fdc80;
+}

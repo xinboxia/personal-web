@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
+  "proxy": "http://127.0.0.1:8080",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
@@ -15,18 +15,27 @@
     "antd": "^4.13.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
-    "react": "^17.0.1",
+    "react": "^17.x",
     "react-bootstrap": "^1.5.1",
-    "react-dom": "^17.0.1",
+    "react-dom": "^17.x",
+    "react-fade-in": "^2.0.1",
     "react-progressbar.js": "^0.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
     "react-slick": "^0.28.1",
+    "react-table": "^7.6.3",
     "react-typing-effect": "^2.0.5",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
-    "web-vitals": "^1.1.0"
+    "spotify-web-api-js": "^1.5.1",
+    "web-vitals": "^1.1.0",
+    "react-spring": "^9.0.0-rc.3"
+  },
+  "peerDependencies": {
+    "react": "^17.x",
+    "react-dom": "^17.x",
+    "react-spring": "^9.0.0-rc.3"
   },
   "scripts": {
     "start": "react-scripts start",

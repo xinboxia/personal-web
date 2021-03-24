@@ -33,6 +33,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated().and()
                 .addFilterBefore(new LoginFilter("/login", authenticationManager()), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(new AuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+//        http.csrf().disable().cors().and().authorizeRequests().anyRequest().permitAll();
     }
 
     // needed for frontend, which is sending requests from the other origin
@@ -40,12 +41,16 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     CorsConfigurationSource corsConfigurationSource() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("*"));
+        config.setAllowedOriginPatterns(Arrays.asList("*"));
         config.setAllowedMethods(Arrays.asList("*"));
         config.setAllowedHeaders(Arrays.asList("*"));
         config.setAllowCredentials(true);
         config.applyPermitDefaultValues();
         source.registerCorsConfiguration("/**", config);
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        config.setAllowedHeaders(Arrays.asList("X-Requested-With","Origin","Content-Type","Accept","Authorization"));
+        config.setExposedHeaders(Arrays.asList("Access-Control-Allow-Headers", "Authorization, x-xsrf-token, Access-Control-Allow-Headers, Origin, Accept, X-Requested-With, " +
+                "Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"));
         return source;
     }
 

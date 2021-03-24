@@ -8,10 +8,10 @@ import ReactTypingEffect from 'react-typing-effect'
 function Video() {
     return (
         <div className="video-page">
-            <div classname='video-container'>
+            <div className='video-container'>
                 <video src="/backgroundvideo01.mp4" autoPlay loop muted />
                 <div className='intro'>
-                    <h1 class='gradient-text'>
+                    <h1 className='gradient-text'>
                         Welcome, You
                     </h1>
                     <p1>My name is</p1>
@@ -24,7 +24,6 @@ function Video() {
                             eraseSpeed={100}
                             eraseDelay={2500}
                             typingDelay={1250}
-                            font-size
                             displayTextRenderer={(text, i) => {
                             return (
                                 <h1>

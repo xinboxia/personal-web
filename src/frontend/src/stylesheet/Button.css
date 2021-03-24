@@ -16,6 +16,12 @@
     border: 1px solid var(--primary);
 }
 
+.btn--secondary {
+    background-color: var(--secondary);
+    color: #ffffff;
+    border: 1px solid var(--secondary);
+}
+
 .btn--outline {
     background-color: transparent;
     color: #fff;
@@ -23,6 +29,15 @@
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
 }
+
+.btn--outline--black:hover {
+    background-color: transparent;
+    color: rgb(2, 2, 2);
+    padding: 8px 20px;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s ease-out;
+}
+
 
 .btn--medium {
     padding: 8px 20px;
@@ -32,6 +47,17 @@
 .btn--large {
     padding: 12px 26px;
     font-size: 20px;
+}
+
+.btn--special {
+    padding: 12px 26px;
+    font-size: 20px;
+}
+
+.btn--special:hover {
+    background: rgb(0, 0, 0);
+    color: #faf7f7;
+    transition: all 0.3s ease-out;
 }
 
 .btn--medium:hover, .btn--large:hover {
